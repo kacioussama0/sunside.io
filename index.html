@@ -134,13 +134,40 @@
         color: #000;
         height: 30px;
         line-height: 30px;
-       
+        position: relative;
+   
+       overflow: hidden;
+     
       }
       span.more-two {
            background-color: transparent;
         
         border: 2px solid #FF7664;
         
+      }
+      span.more::before {
+        content: "Learn More";
+        width: 120px;
+        height: 30px;
+        background-color: #FEE053;
+        position: absolute;
+        left: -100%;
+        transition: 0.5s;
+      }
+      span.more-two::before {
+        content: "Learn More";
+        width: 120px;
+        height: 30px;
+        background-color: #FF7664;
+        position: absolute;
+        left: -100%;
+        transition: 0.5s;
+      }
+      span.more:hover::before , span.more-two:hover:before {
+        left: 0%;
+      }
+      span.more:hover {
+        color: #000;
       }
       span.special-graphic, span.special-photo{
         width: 50%;
