@@ -7,6 +7,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@600&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;900&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   
   <title>Sunnyside landing page</title>
@@ -28,7 +29,7 @@
     }
     header ul  {
       display: flex;
-      margin-top: 0;
+      
       justify-content: center;
       align-items: center;
 
@@ -42,7 +43,8 @@
       cursor: pointer;
       width: 100px;
       text-align: center;
-      
+      height: 30px;
+      line-height: 30px;
 
     }
     header ul li:hover {
@@ -201,7 +203,7 @@
         div.testimonials {
 
         
-          height: 800px;
+          height: fit-content;
           background-color: white;
           padding: 20px;
      
@@ -315,8 +317,70 @@
           justify-content: center;
           align-items: center;
         }
+        header #mobile {
+              display: none;
+        }
 
     /* End Footer */
+    /* Start Media Queries */
+        
+        @media screen and (max-width: 640px) {
+          header ul  {
+            display: none;
+          }
+          header h1 {
+            font-size: 25px;
+          }
+          section {
+            flex-direction: column;
+          }
+          section div {
+            width: 100%;
+            background-position: center center;
+          }
+
+          .clients {
+            flex-direction: column;
+            height: fit-content;
+          }
+          .photos {
+            
+            flex-direction: column;
+            height: fit-content;
+
+          }
+          div.photos img {
+            width: 100%;
+            display: block;
+          }
+          .testimonials {
+            height: fit-content;
+          }
+          div.clients span  {
+          width: 59%;
+        }
+        .container {
+          width: 60%;
+          top: 15%;
+        }
+        span.special-photo {
+          left: 20%;
+          width: 60%;
+        }
+        span.special-graphic {
+          top: 50%;
+          left: 20%;
+          width: 60%;
+        }
+       
+        header #mobile {
+            display: block;
+            margin: 15px auto;
+        }
+      }
+
+    /* End Media Queries */
+    
     /* font-family: 'Barlow', sans-serif; */
     /* font-family: 'Fraunces', serif; */
   </style>
@@ -335,7 +399,7 @@
 
   <!--Start Header-->
   <header>
-   
+    <img src="images/logo.svg" alt="" id="mobile"/>
     <ul>
    <li><img src="images/logo.svg" alt=""/></li>
       <li>About</li>
