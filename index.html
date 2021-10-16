@@ -131,42 +131,67 @@
         width: 120px;
         cursor: pointer;
         border: 2px solid #FEE053;
-        background-color: transparent;
+        background-color: #FEE053;
         margin-top: 40px;
-        color: #000;
+        color: #fff;
         height: 30px;
         line-height: 30px;
         position: relative;
-   
+        z-index: 9999;
        overflow: hidden;
      
       }
       span.more-two {
-           background-color: transparent;
+           background-color: #FF7664;
         
         border: 2px solid #FF7664;
         
       }
       span.more::before {
-        content: "Learn More";
+        content: "";
         width: 120px;
         height: 30px;
-        background-color: #FEE053;
+        background-color: white;
         position: absolute;
         left: -100%;
         transition: 0.5s;
+      
+        
+      }
+      span.more::after {
+        content: "Learn More";
+        width: 120px;
+        height: 30px;
+        background-color: white;
+        position: absolute;
+        right: -100%;
+        transition: 0.5s;
+      }
+      span.more-two::after {
+        content: "Learn More";
+        width: 120px;
+        height: 30px;
+        background-color: white;
+        position: absolute;
+        right: -100%;
+        transition: 0.5s;
+        color: #000;
       }
       span.more-two::before {
         content: "Learn More";
         width: 120px;
         height: 30px;
-        background-color: #FF7664;
+        background-color: white;
         position: absolute;
         left: -100%;
+        
         transition: 0.5s;
       }
       span.more:hover::before , span.more-two:hover:before {
         left: 0%;
+      }
+      span.more:hover::after , span.more-two:hover:after {
+        right: 0%;
       }
       span.more:hover {
         color: #000;
@@ -365,7 +390,6 @@
         }
         span.special-photo {
           left: 20%;
-          top: 55%;
           width: 60%;
         }
         span.special-graphic {
